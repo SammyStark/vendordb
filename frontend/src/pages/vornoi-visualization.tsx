@@ -85,7 +85,7 @@ const LoadingOverlay = () => (
 );
 
 async function getData(): Promise<Employee[]> {
-  const apiUrl = import.meta.env.VITE_API_URL; // Access the VITE_API_URL environment variable
+  const apiUrl = 'http://localhost:3000'  //import.meta.env.VITE_API_URL; // Access the VITE_API_URL environment variable
 
   if (!apiUrl) {
     throw new Error("API URL is not defined in environment variables.");

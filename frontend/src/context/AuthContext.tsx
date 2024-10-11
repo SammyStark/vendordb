@@ -9,7 +9,7 @@ import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-const baseurl = import.meta.env.VITE_API_URL;
+const baseurl = 'http://localhost:3000'  //import.meta.env.VITE_API_URL;
 
 type Props = {
   children?: ReactNode;

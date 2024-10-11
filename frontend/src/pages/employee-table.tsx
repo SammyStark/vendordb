@@ -5,7 +5,7 @@ import axios from "axios";
 import { AuthContext } from "@/context/AuthContext";
 import { toast } from "react-hot-toast";
 async function getData(): Promise<Employee[]> {
-  const apiUrl = import.meta.env.VITE_API_URL; // Access the VITE_API_URL environment variable
+  const apiUrl = 'http://localhost:3000'  //import.meta.env.VITE_API_URL; // Access the VITE_API_URL environment variable
 
   if (!apiUrl) {
     throw new Error("API URL is not defined in environment variables.");
@@ -47,7 +47,7 @@ export default function EmployeeData() {
   return (
     <div className="container mx-auto py-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">Manage Employees</h1>
+        <h1 className="text-2xl font-bold">Manage Vendor Details</h1>
         <button
           onClick={logout}
           className="bg-red-500 hover:bg-red-700 text-white font-bold py-1.5 px-2 text-sm rounded"

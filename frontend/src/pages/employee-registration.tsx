@@ -19,7 +19,7 @@ export default function EmployeeRegistration() {
 
   const { logout, token } = useContext(AuthContext);
 
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = 'http://localhost:3000'  //import.meta.env.VITE_API_URL;
 
   const [employee, setEmployee] = useState({
     name: "",
@@ -96,18 +96,18 @@ export default function EmployeeRegistration() {
             />
           </div>
           <div>
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">Contact</Label>
             <Input
               id="email"
               name="email"
-              type="email"
-              value={employee.email}
+              //type="email"
+              //value={employee.email}
               onChange={handleChange}
-              required
+              //required
             />
           </div>
           <div>
-            <Label htmlFor="profile">Profile URL</Label>
+            <Label htmlFor="profile">Website</Label>
             <Input
               id="profile"
               name="profile"
@@ -118,7 +118,7 @@ export default function EmployeeRegistration() {
             />
           </div>
           <div>
-            <Label htmlFor="department">Department</Label>
+            <Label htmlFor="department">Category</Label>
             <Select
               name="department"
               value={employee.department}
@@ -129,24 +129,27 @@ export default function EmployeeRegistration() {
                 <SelectValue placeholder="Select Department" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Cryptography">Cryptography</SelectItem>
-                <SelectItem value="Threat Management">Threat Management</SelectItem>
-                <SelectItem value="Cloud Security">Cloud Security</SelectItem>
-                <SelectItem value="Blockchain">Blockchain</SelectItem>
+                <SelectItem value="Network Security">Network Security</SelectItem>
+                <SelectItem value="Security Operations Technology">Security Operations Technology</SelectItem>
+                <SelectItem value="Application Security">Application Security</SelectItem>
                 <SelectItem value="Hardware Security">Hardware Security</SelectItem>
+                <SelectItem value="Cloud Security">Cloud Security</SelectItem>
+                <SelectItem value="Cyber Awareness & Training">Cyber Awareness & Training</SelectItem>
                 <SelectItem value="Digital Forensics">Digital Forensics</SelectItem>
+                <SelectItem value="Data Security and Privacy">Data Security and Privacy</SelectItem>
+                <SelectItem value="Data Security and Privacy">Cryptography</SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div>
-            <Label htmlFor="specialization">Specialization</Label>
+            <Label htmlFor="specialization">Specialization/Area of Expertise</Label>
             <Input
               id="specialization"
               name="specialization"
               type="text"
               value={employee.specialization}
               onChange={handleChange}
-              required
+              //required
             />
           </div>
           <Button type="submit">Register Employee</Button>
